@@ -34,10 +34,25 @@ public class JFCategoriaMate extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         bntPrincipiante.setText("Principiante");
+        bntPrincipiante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bntPrincipianteActionPerformed(evt);
+            }
+        });
 
         bntIntermedio.setText("Intermedio");
+        bntIntermedio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bntIntermedioActionPerformed(evt);
+            }
+        });
 
         bntAvanzado.setText("Avanzado");
+        bntAvanzado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bntAvanzadoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -66,6 +81,24 @@ public class JFCategoriaMate extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void bntPrincipianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntPrincipianteActionPerformed
+        // TODO add your handling code here:
+        JDCategoriaMatePrincipiante MatePrincipiante=new JDCategoriaMatePrincipiante();
+        MatePrincipiante.setVisible(true);
+    }//GEN-LAST:event_bntPrincipianteActionPerformed
+
+    private void bntAvanzadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntAvanzadoActionPerformed
+        // TODO add your handling code here:
+        JDCategoriaMateAvanzada MateAvanzado=new JDCategoriaMateAvanzada();
+        MateAvanzado.setVisible(true);
+    }//GEN-LAST:event_bntAvanzadoActionPerformed
+
+    private void bntIntermedioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntIntermedioActionPerformed
+        // TODO add your handling code here:
+        JDCategoriaMateIntermedio MateIntermedio=new JDCategoriaMateIntermedio();
+        MateIntermedio.setVisible(true);
+    }//GEN-LAST:event_bntIntermedioActionPerformed
 
     /**
      * @param args the command line arguments

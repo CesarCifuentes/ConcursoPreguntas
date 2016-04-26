@@ -34,10 +34,25 @@ public class JFCategoriaHistoria extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         btnPrincipiante.setText("Principiante");
+        btnPrincipiante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPrincipianteActionPerformed(evt);
+            }
+        });
 
         btnIntermedio.setText("Intermedio");
+        btnIntermedio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIntermedioActionPerformed(evt);
+            }
+        });
 
         btnAvanzado.setText("Avanzado");
+        btnAvanzado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAvanzadoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -65,6 +80,24 @@ public class JFCategoriaHistoria extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnPrincipianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPrincipianteActionPerformed
+        // TODO add your handling code here:
+        JDCategoriaHistoriaPrincipiante HistoriaPrincipiante=new JDCategoriaHistoriaPrincipiante();
+        HistoriaPrincipiante.setVisible(true);
+    }//GEN-LAST:event_btnPrincipianteActionPerformed
+
+    private void btnIntermedioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIntermedioActionPerformed
+        // TODO add your handling code here:
+        JDCategoriaHistoriaIntermedio HistoriaIntermedio=new JDCategoriaHistoriaIntermedio();
+        HistoriaIntermedio.setVisible(true);
+    }//GEN-LAST:event_btnIntermedioActionPerformed
+
+    private void btnAvanzadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAvanzadoActionPerformed
+        // TODO add your handling code here:
+        JDCategoriaHistoriaAvanzado HistoriaAvanzado=new JDCategoriaHistoriaAvanzado();
+        HistoriaAvanzado.setVisible(true);
+    }//GEN-LAST:event_btnAvanzadoActionPerformed
 
     /**
      * @param args the command line arguments

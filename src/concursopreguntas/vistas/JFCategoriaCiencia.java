@@ -34,10 +34,25 @@ public class JFCategoriaCiencia extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         bntPrincipiante.setText("Principiante");
+        bntPrincipiante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bntPrincipianteActionPerformed(evt);
+            }
+        });
 
         bntIntermedio.setText("Intermedio");
+        bntIntermedio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bntIntermedioActionPerformed(evt);
+            }
+        });
 
         bntAvanzado.setText("Avanzado");
+        bntAvanzado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bntAvanzadoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -65,6 +80,24 @@ public class JFCategoriaCiencia extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void bntPrincipianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntPrincipianteActionPerformed
+        // TODO add your handling code here:
+        JDCategoriaCienciaPrincipiante CienciaPrincipiante=new JDCategoriaCienciaPrincipiante();
+        CienciaPrincipiante.setVisible(true);
+    }//GEN-LAST:event_bntPrincipianteActionPerformed
+
+    private void bntIntermedioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntIntermedioActionPerformed
+        // TODO add your handling code here:
+        JDCategoriaCienciaIntermedio CienciaIntermedio=new JDCategoriaCienciaIntermedio();
+        CienciaIntermedio.setVisible(true);
+    }//GEN-LAST:event_bntIntermedioActionPerformed
+
+    private void bntAvanzadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntAvanzadoActionPerformed
+        // TODO add your handling code here:
+        JDCategoriaCienciaAvanzado CienciaAvanzado=new JDCategoriaCienciaAvanzado();
+        CienciaAvanzado.setVisible(true);
+    }//GEN-LAST:event_bntAvanzadoActionPerformed
 
     /**
      * @param args the command line arguments

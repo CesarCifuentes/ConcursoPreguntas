@@ -34,10 +34,25 @@ public class JFCategoriaCulturaGeneral extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         bntPrincipiante.setText("Principiante");
+        bntPrincipiante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bntPrincipianteActionPerformed(evt);
+            }
+        });
 
         bntIntermedio.setText("Intermedio");
+        bntIntermedio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bntIntermedioActionPerformed(evt);
+            }
+        });
 
         btnAvanzado.setText("Avanzado");
+        btnAvanzado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAvanzadoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -56,15 +71,33 @@ public class JFCategoriaCulturaGeneral extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(82, 82, 82)
                 .addComponent(bntPrincipiante)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(bntIntermedio)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnAvanzado)
-                .addContainerGap(132, Short.MAX_VALUE))
+                .addContainerGap(127, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void bntPrincipianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntPrincipianteActionPerformed
+        // TODO add your handling code here:
+        JDCategoriaCulturaGeneralPrincipiante CulturaGeneralPrincipiante=new JDCategoriaCulturaGeneralPrincipiante();
+        CulturaGeneralPrincipiante.setVisible(true);
+    }//GEN-LAST:event_bntPrincipianteActionPerformed
+
+    private void bntIntermedioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntIntermedioActionPerformed
+        // TODO add your handling code here:
+        JDCategoriaCulturaGeneralIntermedio CulturaGeneralIntermedio=new JDCategoriaCulturaGeneralIntermedio();
+        CulturaGeneralIntermedio.setVisible(true);
+    }//GEN-LAST:event_bntIntermedioActionPerformed
+
+    private void btnAvanzadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAvanzadoActionPerformed
+        // TODO add your handling code here:
+        JDCategoriaCulturaGeneralAvanzado CulturaGeneralAvanzado=new JDCategoriaCulturaGeneralAvanzado();
+        CulturaGeneralAvanzado.setVisible(true);
+    }//GEN-LAST:event_btnAvanzadoActionPerformed
 
     /**
      * @param args the command line arguments

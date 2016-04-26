@@ -41,6 +41,11 @@ public class JFCategoriaProgramacion extends javax.swing.JFrame {
         });
 
         btnIntermedio.setText("Intermedio");
+        btnIntermedio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIntermedioActionPerformed(evt);
+            }
+        });
 
         btnAvanzado.setText("Avanzado");
         btnAvanzado.addActionListener(new java.awt.event.ActionListener() {
@@ -78,11 +83,21 @@ public class JFCategoriaProgramacion extends javax.swing.JFrame {
 
     private void btnPrincipianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPrincipianteActionPerformed
         // TODO add your handling code here:
+         JDCategoriaProgramacionPrincipiante ProgramacionPrincipiante=new JDCategoriaProgramacionPrincipiante();
+        ProgramacionPrincipiante.setVisible(true);
     }//GEN-LAST:event_btnPrincipianteActionPerformed
 
     private void btnAvanzadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAvanzadoActionPerformed
         // TODO add your handling code here:
+        JDCategoriaProgramacionAvanzado ProgramacionAvanzado=new JDCategoriaProgramacionAvanzado();
+        ProgramacionAvanzado.setVisible(true);
     }//GEN-LAST:event_btnAvanzadoActionPerformed
+
+    private void btnIntermedioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIntermedioActionPerformed
+        // TODO add your handling code here:
+        JDCategoriaProgramacionIntermedio ProgramacionIntermedio=new JDCategoriaProgramacionIntermedio();
+        ProgramacionIntermedio.setVisible(true);
+    }//GEN-LAST:event_btnIntermedioActionPerformed
 
     /**
      * @param args the command line arguments
