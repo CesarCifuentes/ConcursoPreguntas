@@ -20,7 +20,7 @@ import jxl.read.biff.BiffException;
  */
 public class ConexionExcel {
     
-    private static Workbook leerArchivo( String nombreArchivo ){
+    public static Workbook leerArchivo( String nombreArchivo ){
     
         Workbook archivoExcel = null;
         
@@ -36,7 +36,7 @@ public class ConexionExcel {
         return archivoExcel;
     }
     
-    private static Pregunta obtenerPregunta( Workbook archivoExcel, int area, int nivel, int numeroPregunta ){
+    public static Pregunta obtenerPregunta( Workbook archivoExcel, int area, int nivel, int numeroPregunta ){
  
         Pregunta datosPregunta = null;
         String pregunta;
