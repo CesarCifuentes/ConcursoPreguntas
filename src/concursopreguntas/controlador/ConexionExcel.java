@@ -5,6 +5,7 @@
  */
 package concursopreguntas.controlador;
 
+import static concursopreguntas.controlador.VariablesGlobales.FILAS_IGNORADAS;
 import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -41,7 +42,7 @@ public class ConexionExcel {
         String pregunta;
         String respuesta;
         String esUtilizada;
-        int contadorFilas = 0;
+        numeroPregunta += FILAS_IGNORADAS;
 
         Sheet hoja = archivoExcel.getSheet( area );
         if ( hoja != null ){
