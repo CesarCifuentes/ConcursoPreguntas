@@ -20,23 +20,27 @@ import jxl.read.biff.BiffException;
  */
 public class ConexionExcel {
     
-    public static Workbook leerArchivo( String nombreArchivo ){
+    private static Workbook archivoExcel;
     
-        Workbook archivoExcel = null;
+    public static boolean leerArchivo( String nombreArchivo ){
+    
+        archivoExcel = null;
         
         try {
             archivoExcel = Workbook.getWorkbook(
                     new File( "H:\\Proyecto-Be-1\\proventas-connector\\ConcursoPreguntas\\preguntas.xls" )
             );
-                      
+
+            return true;
+            
         } catch (IOException | BiffException ex) {
             Logger.getLogger(ConexionExcel.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        return archivoExcel;
+        return false;
     }
     
-    public static Pregunta obtenerPregunta( Workbook archivoExcel, int area, int nivel, int numeroPregunta ){
+    public static Pregunta obtenerPregunta( int area, int nivel, int numeroPregunta ){
  
         Pregunta datosPregunta = null;
         String pregunta;

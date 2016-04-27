@@ -5,6 +5,10 @@
  */
 package concursopreguntas.vistas;
 
+import concursopreguntas.controlador.ConexionExcel;
+import concursopreguntas.controlador.Pregunta;
+import concursopreguntas.controlador.VariablesGlobales;
+
 /**
  *
  * @author Baloo
@@ -17,6 +21,9 @@ public class JDCategoriaCienciaAvanzado extends javax.swing.JDialog {
     public JDCategoriaCienciaAvanzado(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        Pregunta pregunta = null;
+        ConexionExcel conn = new ConexionExcel();
+        pregunta = ConexionExcel.obtenerPregunta( VariablesGlobales.AREA_CIENCIA, VariablesGlobales.NIVEL_AVANZADO, 0);
     }
 
     JDCategoriaCienciaAvanzado() {
